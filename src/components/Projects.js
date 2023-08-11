@@ -1,10 +1,10 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
 import Todo from "../images/projects-img/todo-list.png";
-import Secrets from "../images/projects-img/secrets.png";
+// import Secrets from "../images/projects-img/secrets.png";
 import Drumkit from "../images/projects-img/drum-kit.png";
 import Dicegame from "../images/projects-img/dice-game.png";
-import Blog from "../images/projects-img/blog.png";
+// import Blog from "../images/projects-img/blog.png";
 import Simongame from "../images/projects-img/simon-game.png";
 
 const Projects = () => {
@@ -54,6 +54,7 @@ const Projects = () => {
                   <a
                     href="https://todolist-toby-app.onrender.com"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Check it out
                   </a>
@@ -161,6 +162,7 @@ const Projects = () => {
                   <a
                     href="https://tobyajlot.github.io/Dice-game"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Check it out
                   </a>
@@ -197,6 +199,7 @@ const Projects = () => {
                   <a
                     href="https://tobyajlot.github.io/Simon-Game"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Check it out
                   </a>
@@ -231,6 +234,7 @@ const Projects = () => {
                   <a
                     href="https://tobyajlot.github.io/Drum-Kit"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Check it out
                   </a>

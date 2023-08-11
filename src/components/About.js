@@ -11,7 +11,7 @@ const About = () => {
             <span class="relative inline-block">About Me</span>
           </h2>
           <div class="w-full flex flex-wrap">
-            <div class="w-full lg:w-1/2 p-2 flex items-center">
+            <div class="w-full lg:w-1/2 p-2 flex items-center rounded-full">
               <img
                 alt="Toby"
                 loading="lazy"
@@ -19,7 +19,7 @@ const About = () => {
                 height="100"
                 decoding="async"
                 data-nimg="1"
-                class="mx-auto rounded-full border shadow-md"
+                class="mx-auto border shadow-md rounded-full"
                 src={Profile}
               />
             </div>
