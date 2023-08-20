@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "../images/Upwork-removebg-preview (1).png";
+import Profile from "../images/about_pic.png";
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
                 alt="Toby"
                 loading="lazy"
                 width="400"
-                height="100"
+                height=""
                 decoding="async"
                 data-nimg="1"
                 class="mx-auto border shadow-md rounded-full"
@@ -24,19 +24,19 @@ const About = () => {
               />
             </div>
             <div class="w-full lg:w-1/2 flex flex-col justify-center p-2 py-8">
-              <p class="text-base text-gray-200 md:text-lg">
+              <p class="text-left text-gray-200 md:text-lg">
                 My name is Tobi and I am a talented musician and full stack web
                 developer. I love watching movies of various genres including
                 animations. I also love playing video and mobile games, I like
                 the thrills they bring.
               </p>
-              <p class="mt-4 text-base text-gray-200 md:text-lg">
-                I have a background in health care but I soon realize how much
+              <p class="mt-4 text-left text-gray-200 md:text-lg">
+                I have a background in health care but I soon realized how much
                 interest I have in programming when I researched how to make my
-                own game. There's a lot of career paths I'd like to explore in
+                own game. There are a lot of career paths I'd like to explore in
                 the Tech industry such as Artificial Intelligence, Cyber
-                Security and so on. I decided to be a web developer to start my
-                tech career.
+                Security and so on. I decided to start with software development
+                to begin my journey.
               </p>
             </div>
           </div>
