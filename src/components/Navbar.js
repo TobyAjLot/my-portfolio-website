@@ -1,14 +1,38 @@
-import { useState, useRef } from "react";
-import { handleScroll } from "../handleScroll";
+import { useEffect, useState, useRef } from "react";
 import useAutoHide from "auto-hide-hook";
 
 const Navbar = () => {
   const menuRef = useRef(null);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   useAutoHide(menuRef, setIsMenuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative bg-blue-950 z-50">
+    <div
+      className={`${
+        isScrolled ? "bg-blue-800 shadow-lg" : "bg-transparent"
+      } fixed w-full z-50 transition duration-300 ease-in-out`}
+    >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <a
@@ -25,43 +49,38 @@ const Navbar = () => {
 
           <ul className="space-x-8 items-center hidden lg:flex">
             <li>
-              <a
-                href="#about-me"
-                onClick={handleScroll}
+              <button
+                onClick={() => handleScrollTo("about-me")}
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-gray-500"
               >
                 About Me
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#skills"
-                onClick={handleScroll}
+              <button
+                onClick={() => handleScrollTo("skills")}
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-gray-500"
               >
                 Skills
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#projects"
-                onClick={handleScroll}
+              <button
+                onClick={() => handleScrollTo("projects")}
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-gray-500"
               >
                 Projects
-              </a>
+              </button>
             </li>
           </ul>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="#contact-me"
-                onClick={handleScroll}
-                // rounded shadow-md bg-blue-accent-400 focus:shadow-outline focus:outline-none
+              <button
+                onClick={() => handleScrollTo("contact-me")}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 hover:text-gray-500"
               >
                 Contact Me
-              </a>
+              </button>
             </li>
           </ul>
           <div className="lg:hidden" ref={menuRef}>
@@ -71,7 +90,7 @@ const Navbar = () => {
               className="p-2 -mr-1 transition duration-200 rounded"
               onClick={() => setIsMenuOpen(true)}
             >
-              <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+              <svg className="w-5 text-gray-300" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -117,40 +136,36 @@ const Navbar = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a
-                          href="#about-me"
-                          onClick={handleScroll}
+                        <button
+                          onClick={() => handleScrollTo("about-me")}
                           className="font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-accent-200"
                         >
                           About Me
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a
-                          href="#skills"
-                          onClick={handleScroll}
+                        <button
+                          onClick={() => handleScrollTo("skills")}
                           className="font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-accent-200"
                         >
                           Skills
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a
-                          href="#projects"
-                          onClick={handleScroll}
+                        <button
+                          onClick={() => handleScrollTo("projects")}
                           className="font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-accent-200"
                         >
                           Projects
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a
-                          href="#contact-me"
-                          onClick={handleScroll}
+                        <button
+                          onClick={() => handleScrollTo("contact-me")}
                           className="bg-blue-accent-200 font-medium tracking-wide text-blue-700 px-4 py-2"
                         >
                           Contact Me
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </nav>

@@ -4,7 +4,7 @@ import Profile from "../images/about_pic.png";
 const About = () => {
   return (
     <div id="about-me" class="relative bg-blue-950">
-      <div class="barber-pic absolute top-0 left-0 right-0 bottom-0 z-0 opacity-10"></div>
+      <div class="absolute top-0 left-0 right-0 bottom-0 z-0 opacity-10"></div>
       <div class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-white">
         <div class="max-w-xl mb-10 md:mx-auto lg:max-w-5xl md:mb-12">
           <h2 class="text-center max-w-lg mx-auto mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-100 sm:text-4xl md:mx-auto">

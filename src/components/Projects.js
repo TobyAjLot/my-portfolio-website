@@ -1,11 +1,6 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
-import Todo from "../images/projects-img/todo-list.png";
-// import Secrets from "../images/projects-img/secrets.png";
-import Drumkit from "../images/projects-img/drum-kit.png";
-import Dicegame from "../images/projects-img/dice-game.png";
-// import Blog from "../images/projects-img/blog.png";
-import Simongame from "../images/projects-img/simon-game.png";
+import farmlink from "../images/projects-img/farmlink.PNG";
 
 const Projects = () => {
   return (
@@ -14,231 +9,80 @@ const Projects = () => {
         <div className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Apps I've Built
+            Projects
           </h1>
-          <div className="flex flex-wrap m-8">
-            <div className="sm:w-1/2 w-100 p-4 flex relative">
+        </div>
+
+        <div className="flex flex-wrap -m-4">
+          <div className="p-4 md:w-1/2 lg:w-1/3 w-full">
+            <div className="h-full bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src={Todo}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
+                className="lg:h-72 md:h-36 w-full object-cover object-center"
+                src={farmlink}
+                alt="farmlink"
               />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Tobi's To-Do List
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li> Node JS</li>
-                    <li> MongoDB</li>
-                  </ul>
-                  <ul className="technologies mb-2">
-                    <li> Express JS</li>
-                    <li> EJS </li>
-                    <li> Mongoose </li>
-                    <li> Lodash</li>
-                  </ul>
-                </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>This app lets
-                    you add pending tasks you need to complete at a later time.
-                    You can also create a custom list by adding /(name of list)
-                    to the home page
+
+              <div className="p-6 text-left">
+                <h2 className="text-4xl text-gray-800 font-bold mb-4 ">
+                  Farmlink
+                </h2>
+                <h3 className="text-2xl text-gray-500 font-medium mb-4">
+                  E-Commerce
+                </h3>
+                <p className="leading-relaxed text-gray-500 mb-4">
+                  Farmlink is a platform that empowers farmers and buyers to
+                  connect, collaborate, and thrive in the agricultural
+                  ecosystem.
+                </p>
+
+                {/* <h3 className="text-gray-500 text-md font-medium mb-2">
+                  Technologies
+                </h3>
+                <hr className="my-4" />
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">
+                    React
+                  </span>
+                  <span className="bg-green-500 text-white px-2 py-1 rounded text-xs">
+                    Node.js
+                  </span>
+                  <span className="bg-yellow-500 text-white px-2 py-1 rounded text-xs">
+                    JavaScript
+                  </span>
+                  <span className="bg-indigo-500 text-white px-2 py-1 rounded text-xs">
+                    Tailwind CSS
+                  </span>
+                  <span className="bg-green-700 text-white px-2 py-1 rounded text-xs">
+                    MongoDB
+                  </span>
+                </div> */}
+
+                <h3 className="text-md font-semibold text-gray-700 mb-2">
+                  <span className="font-bold text-gray-600 mr-1">Note:</span>
+                  <p className="leading-relaxed text-gray-600">
+                    I contributed to the backend development of this project,
+                    working alongside a talented backend team of 5 members.
                   </p>
-                </div>
-                <button className="relative text-black bg-gray-200 p-2 rounded">
+                </h3>
+
+                <div className="flex justify-between mt-6">
                   <a
-                    href="https://todolist-toby-app.onrender.com"
+                    href="https://farmlink-fe-int.vercel.app/"
                     target="_blank"
+                    className="text-white bg-blue-600 py-2 px-4 rounded-lg text-sm font-medium hover:bg-blue-700"
                     rel="noreferrer"
                   >
-                    Check it out
+                    Live Demo
                   </a>
-                </button>
-              </div>
-            </div>
-            {/* <div className="sm:w-1/2 w-100 p-4 flex relative">
-              <img
-                src={Secrets}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
-              />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Secrets App
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li> Node JS</li>
-                    <li> Mongoose </li>
-                  </ul>
-                  <ul className="technologies mb-2">
-                    <li> Express JS</li>
-                    <li> MD5 </li>
-                    <li> MongoDB</li>
-                    <li> Google-OAuth2 </li>
-                  </ul>
-                </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>Share that
-                    secret that is bugging your mind. Don't worry, No one will
-                    know its you.
-                  </p>
-                </div>
-                <button className="relative text-black bg-gray-200 p-2 rounded">
-                  Check it out
-                </button>
-              </div>
-            </div> */}
-            {/* <div className="sm:w-1/2 w-100 p-4 flex relative">
-              <img
-                src={Blog}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
-              />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Tobi's Blog
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li> MongoDB</li>
-                  </ul>
-                  <ul className="technologies mb-2">
-                    <li> Node JS</li>
-                    <li> Express JS</li>
-                    <li> EJS </li>
-                    <li> Mongoose </li>
-                  </ul>
-                </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>Stay up to
-                    date with the fast changing tech space
-                  </p>
-                </div>
-                <button className="relative text-black bg-gray-200 p-2 rounded">
-                  Check it out
-                </button>
-              </div>
-            </div> */}
-            <div className="sm:w-1/2 w-100 p-4 flex relative">
-              <img
-                src={Dicegame}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
-              />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Dice Game
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li> HTML</li>
-                    <li> CSS</li>
-                    <li> Bootstrap</li>
-                    <li> Javascript</li>
-                  </ul>
-                </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>Challenge
-                    your friends to the epic dice rolling and see your score go
-                    up the board. May the best friend win!
-                  </p>
-                </div>
-                <button className="relative text-black bg-gray-200 p-2 rounded">
-                  <a
-                    href="https://tobyajlot.github.io/Dice-game"
+                  {/* <a
+                    href=""
                     target="_blank"
+                    className="text-white bg-gray-600 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-700"
                     rel="noreferrer"
                   >
-                    Check it out
-                  </a>
-                </button>
-              </div>
-            </div>
-            <div className="sm:w-1/2 w-100 p-4 flex relative">
-              <img
-                src={Simongame}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
-              />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Simon Game
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li> HTML</li>
-                    <li> CSS</li>
-                    <li> Bootstrap</li>
-                    <li> Javascript</li>
-                  </ul>
+                    Source Code
+                  </a> */}
                 </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>This is a
-                    version of the Simon electronic game of short-term memory
-                    skill invented by Ralph H. Baer and Howard J. How far can
-                    you go?
-                  </p>
-                </div>
-                <button className="relative text-black bg-gray-200 p-2 rounded">
-                  <a
-                    href="https://tobyajlot.github.io/Simon-Game"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Check it out
-                  </a>
-                </button>
-              </div>
-            </div>
-            <div className="sm:w-1/2 w-100 p-4 flex relative">
-              <img
-                src={Drumkit}
-                alt="gallery"
-                className="rounded-3xl p-4 absolute inset-0 w-full h-full object-cover object-center"
-              />
-              <div className="px-8 py-2 relative z-10 w-full bg-gray-900 opacity-0 duration-300 hover:opacity-100 rounded-lg inset-0">
-                <h1 className="title-font text-3xl font-medium text-white mb-3">
-                  Drumkit
-                </h1>
-                <div className="w-full h-auto relative text-center">
-                  <ul className="technologies mb-2">
-                    <li> HTML</li>
-                    <li> CSS</li>
-                    <li> Bootstrap</li>
-                    <li> Javascript</li>
-                  </ul>
-                </div>
-                <div className="mt-2 pb-4">
-                  <p>
-                    <span className="font-bold">Descripton: </span>Wanna have
-                    some fun with the sound of the Drumset? Try the autoplay
-                  </p>
-                </div>
-                <button className="relative text-black bg-white p-2 rounded">
-                  <a
-                    href="https://tobyajlot.github.io/Drum-Kit"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Check it out
-                  </a>
-                </button>
               </div>
             </div>
           </div>
