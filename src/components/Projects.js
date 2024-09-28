@@ -61,7 +61,7 @@ const Projects = () => {
                   <span className="font-bold text-gray-600 mr-1">Note:</span>
                   <p className="leading-relaxed text-gray-600">
                     I contributed to the backend development of this project,
-                    working alongside a talented backend team of 5 members.
+                    working alongside skilled team members.
                   </p>
                 </h3>
 
